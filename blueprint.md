@@ -1,35 +1,29 @@
-# Detective Agency Website Project Blueprint
+# Detective Agency Website Project Blueprint (v2.0 - High Conversion)
 
 ## Overview
-This project aims to create a modern, high-trust, and professional website for a detective agency, inspired by the design and structure of `lawl-crime.co.kr`. The website will focus on reliability, professionalism, and immediate accessibility for clients needing sensitive investigations.
+A high-trust, conversion-optimized website for "Core Private Investigation (Core Detective)". 
+Focused on empathy, legal compliance (Naver Ad standards), and professional authority.
 
-## Design & Aesthetic
-- **Color Palette:** Deep Navy (#0a192f), Slate Grey (#ccd6f6), Gold/Brass (#d4af37), and Crisp White.
-- **Typography:** Strong Sans-serif for headings (e.g., Montserrat or Inter), clean Serif for body text to evoke a "classic investigator" yet modern feel.
-- **Visual Effects:**
-    - Subtle noise texture on the background for a premium feel.
-    - Deep, soft shadows for cards and interactive elements.
-    - Subtle 3D elements (using Three.js) for a sophisticated atmosphere.
-- **Responsive Design:** Fully optimized for mobile, tablet, and desktop using CSS Container Queries and Flexbox/Grid.
+## Terminology Strategy (Ad Compliance)
+- **Avoid:** Divorce evidence, Affair, Spy, Tracking, 100% Success.
+- **Use:** Family dispute resolution support, Misconduct fact-finding, Evidence collection assistance, Legal fact-finding.
 
-## Core Features
-1. **Hero Section:** High-impact headline with a "Success Statistics" counter and a primary Call-to-Action (CTA) for consultation.
-2. **Service Categories:** Interactive cards for various investigation services (e.g., Corporate, Private, Digital Forensics).
-3. **Success Stories:** A section highlighting handled cases (anonymized) to build trust.
-4. **Expert Team:** Professional profiles of the investigators.
-5. **Secure Consultation Form:** A private, secure form for initial inquiries.
-6. **Floating Quick-Action Buttons:** Immediate access to phone and KakaoTalk/Instant Messaging.
+## Design & Aesthetic (Trust-Focused)
+- **Primary Colors:** Royal Navy (#0f172a), Deep Gold (#c5a059), Professional Grey (#f1f5f9).
+- **Layout:** Vertical scrolling story-telling (Problem -> Solution -> Trust -> Action).
+- **Typography:** Bold, clean Korean fonts (Pretendard/Noto Sans KR) to emphasize authority.
 
-## Implementation Plan (Current Task)
-1. **Scaffold Project:** Create/Update `index.html`, `style.css`, and `main.js`.
-2. **Web Components:** Develop reusable components for the Header, Footer, and Service Cards.
-3. **Modern CSS:** Implement `@layer`, `:has()`, and Container Queries.
-4. **Interactive Elements:** Add subtle animations and Three.js background.
-5. **Version Control:** Commit and push changes to the linked GitHub repository.
+## Core Sections & Features
+1. **Hero Section:** "Your shield in the dark." High-impact visuals + Trust stats.
+2. **Pain Point Section:** Identify with the client's emotional distress.
+3. **Core Services:** Re-branded with professional terms.
+4. **Differentiation:** 24/7 Secret HQ, Legal Counsel verification, High-tech equipment.
+5. **Process Timeline:** Transparent 4-step investigation workflow.
+6. **Anonymous Testimonials:** Real-world impact stories.
+7. **Safe-Consultation:** Privacy-first contact form + Quick Phone call.
 
-## Technical Stack
-- **HTML5:** Semantic markup.
-- **CSS3:** Modern Baseline features (Container Queries, `:has()`, etc.).
-- **JavaScript:** ES Modules, Web Components.
-- **Three.js:** Subtle 3D background/effects.
-- **Icons:** Lucide Icons (via CDN).
+## Implementation Steps
+1. **Update `index.html`:** Full structural overhaul with new content strategy.
+2. **Update `style.css`:** Enhance visual hierarchy and add "Trust" components (Process bars, Icon boxes).
+3. **Update `main.js`:** Add smooth scroll animations and interaction for "Trust" elements.
+4. **Push to GitHub:** Document versions.
