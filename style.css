@@ -43,62 +43,102 @@
 }
 
 @layer components {
-    /* Badge */
-    .badge {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background: rgba(197, 160, 89, 0.1);
-        color: var(--primary);
-        border: 1px solid var(--primary);
-        border-radius: 99px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        margin-bottom: 1.5rem;
-    }
-
-    /* Hero */
-    .hero-section {
-        min-height: 90vh;
+    /* [Visual Hero Section] */
+    .visual-hero {
+        position: relative;
+        height: 100vh;
+        min-height: 700px;
+        overflow: hidden;
         display: flex;
         align-items: center;
-        padding-top: 100px;
+        padding: 0;
+        background: #000;
     }
 
+    .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        opacity: 0.6; /* Moody look */
+    }
+
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 50%, rgba(15, 23, 42, 0.9) 100%);
+        z-index: 1;
+    }
+
+    .hero-container {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Cinematic Animations */
+    .fade-up-heavy {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(10px);
+        animation: fadeUpHeavy 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeUpHeavy {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+    }
+
+    .delay-1 { animation-delay: 0.4s; }
+    .delay-2 { animation-delay: 0.8s; }
+    .delay-3 { animation-delay: 1.2s; }
+
     .hero-title {
-        font-size: clamp(2.5rem, 6vw, 4rem);
-        margin-bottom: 1.5rem;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        font-weight: 800;
+        margin-bottom: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-title .line {
+        display: block;
     }
 
     .hero-title .highlight {
         color: var(--primary);
-        text-decoration: underline;
-        text-underline-offset: 8px;
     }
 
     .hero-description {
-        font-size: 1.25rem;
-        max-width: 700px;
-        margin-bottom: 3rem;
+        font-size: 1.4rem;
+        max-width: 800px;
+        line-height: 1.6;
+        margin-bottom: 3.5rem;
+        color: rgba(255, 255, 255, 0.8);
     }
 
-    /* Stats */
-    .hero-stats {
-        display: flex;
-        gap: 3rem;
-        margin-bottom: 4rem;
-    }
-
-    .stat-number {
-        display: block;
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: var(--text-heading);
-    }
-
-    .stat-label {
+    /* Badge */
+    .badge {
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        background: rgba(197, 160, 89, 0.2);
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        border-radius: 99px;
         font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(5px);
     }
 
     /* Buttons */
@@ -114,8 +154,8 @@
     }
 
     .btn-large {
-        padding: 1.2rem 3rem;
-        font-size: 1.1rem;
+        padding: 1.4rem 3.5rem;
+        font-size: 1.2rem;
     }
 
     .btn-primary {
@@ -127,12 +167,17 @@
     .btn-primary:hover {
         background: var(--primary-light);
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px -5px rgba(197, 160, 89, 0.4);
+        box-shadow: 0 15px 30px -10px rgba(197, 160, 89, 0.5);
     }
 
     .btn-outline {
-        border: 2px solid var(--primary);
-        color: var(--primary);
+        border: 2px solid var(--white);
+        color: var(--white);
+    }
+
+    .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
     }
 
     /* Pain Section */
@@ -291,4 +336,5 @@
     .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
     .form-row { grid-template-columns: 1fr; }
     .section-title { font-size: 2.25rem; }
+    .visual-hero { height: auto; min-height: 100vh; padding: 120px 0 60px; }
 }
